@@ -52,7 +52,7 @@ class MainScreenState extends State<MainScreen>
 
   @override
   Widget build(BuildContext context) {
-    return PopScope(
+    return PopScope( //뒤로가기 버튼을 눌렀을 때, 루트 페이지인지 확인하고, 루트 페이지가 아니면 뒤로가기를 처리하고, 루트 페이지면 앱을 종료한다.
       canPop: isRootPage,
       onPopInvoked: _handleBackPressed,
       child: Scaffold(
