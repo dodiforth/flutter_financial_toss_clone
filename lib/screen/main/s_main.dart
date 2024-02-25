@@ -52,7 +52,8 @@ class MainScreenState extends State<MainScreen>
 
   @override
   Widget build(BuildContext context) {
-    return PopScope( //뒤로가기 버튼을 눌렀을 때, 루트 페이지인지 확인하고, 루트 페이지가 아니면 뒤로가기를 처리하고, 루트 페이지면 앱을 종료한다.
+    return PopScope(
+      //뒤로가기 버튼을 눌렀을 때, 루트 페이지인지 확인하고, 루트 페이지가 아니면 뒤로가기를 처리하고, 루트 페이지면 앱을 종료한다.
       canPop: isRootPage,
       onPopInvoked: _handleBackPressed,
       child: Scaffold(
@@ -63,6 +64,7 @@ class MainScreenState extends State<MainScreen>
           padding: EdgeInsets.only(
               bottom: extendBody ? 60 - bottomNavigationBarBorderRadius : 0),
           child: SafeArea(
+            top: false, // SafeArea를 사용하면, 상단에 패딩이 생기는데, 이를 없애기 위해 사용한다.
             bottom: !extendBody,
             child: pages,
           ),
