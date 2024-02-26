@@ -1,5 +1,6 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/widget/round_button_theme.dart';
+import 'package:fast_app_base/common/widget/w_big_button.dart';
 import 'package:fast_app_base/common/widget/w_round_button.dart';
 import 'package:fast_app_base/screen/dialog/d_message.dart';
 import 'package:fast_app_base/screen/main/tab/home/w_ttoss_app_bar.dart';
@@ -17,12 +18,22 @@ class HomeFragment extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black,
-      child: const Stack(
+      child: Stack(
         children: [
           SingleChildScrollView(
-            child: Column(),
+            padding: const EdgeInsets.only(top: 110),
+            child: Column(
+              children: [
+                BigButton(
+                  '토스뱅크',
+                  onTap: () {
+                    context.showSnackbar('토스뱅크가 눌렸습니다.');
+                  },
+                )
+              ],
+            ).pSymmetric(h: 20), // pSymmetric: padding symmetric to Column
           ),
-          TtossAppBar(),
+          const TtossAppBar(),
         ],
       ),
     );
