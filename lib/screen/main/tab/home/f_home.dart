@@ -3,6 +3,8 @@ import 'package:fast_app_base/common/widget/round_button_theme.dart';
 import 'package:fast_app_base/common/widget/w_big_button.dart';
 import 'package:fast_app_base/common/widget/w_round_button.dart';
 import 'package:fast_app_base/screen/dialog/d_message.dart';
+import 'package:fast_app_base/screen/main/tab/home/bank_accounts_dummy.dart';
+import 'package:fast_app_base/screen/main/tab/home/w_bank_account.dart';
 import 'package:fast_app_base/screen/main/tab/home/w_ttoss_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +31,8 @@ class HomeFragment extends StatelessWidget {
                   onTap: () {
                     context.showSnackbar('토스뱅크가 눌렸습니다.');
                   },
-                )
+                ),
+                ...bankAccounts.map((e) => BankAccountWidget(account: e)),
               ],
             ).pSymmetric(h: 20), // pSymmetric: padding symmetric to Column
           ),

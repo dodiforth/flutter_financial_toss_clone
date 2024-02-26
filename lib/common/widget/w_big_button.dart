@@ -1,5 +1,6 @@
 import 'package:fast_app_base/common/dart/extension/context_extension.dart';
 import 'package:fast_app_base/common/widget/w_arrow.dart';
+import 'package:fast_app_base/common/widget/w_rounded_container.dart';
 import '../../common/common.dart';
 import 'package:flutter/material.dart';
 
@@ -12,12 +13,7 @@ class BigButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      decoration: BoxDecoration(
-        color: context.appColors.buttonBackground,
-        borderRadius: BorderRadius.circular(20),
-      ),
+    return RoundedContainer(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
