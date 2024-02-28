@@ -20,25 +20,61 @@ final bankAccountShinhan3 = BankAccount(
   accountTypeName: '저축예금', //accountTypeName nullable
 );
 
+final bankAccountShinhan4 = BankAccount(
+  bankShinhan,
+  1000000, //balance
+  accountTypeName: '입출금통장', //accountTypeName nullable
+);
+
 final bankAccountTtoss = BankAccount(
   bankTtoss,
   1000000, //balance
 );
 
-final bankAccountKakao = BankAccount(
-  bankKakao,
-  2000000, //balance
-  accountTypeName: '입출금통장'
+final bankAccountTtoss1 = BankAccount(
+  bankTtoss,
+  1000000, //balance
 );
+
+final bankAccountTtoss2 = BankAccount(
+  bankTtoss,
+  1000000, //balance
+);
+
+final bankAccountTtoss3 = BankAccount(
+  bankTtoss,
+  1000000, //balance
+);
+
+final bankAccountTtoss4 = BankAccount(
+  bankTtoss,
+  1000000, //balance
+);
+
+final bankAccountKakao = BankAccount(bankKakao, 2000000, //balance
+    accountTypeName: '입출금통장');
+
+final bankAccountKakao2 = BankAccount(bankKakao, 2000000, //balance
+    accountTypeName: '입출금통장');
+
+final bankAccountKaKao3 = BankAccount(bankKakao, 2000000, //balance
+    accountTypeName: '입출금통장');
 
 main() {
   print(bankAccounts[0].accountTypeName);
 }
 
-final List<BankAccount>bankAccounts = [
+final List<BankAccount> bankAccounts = [
   bankAccountShinhan1,
   bankAccountShinhan2,
   bankAccountShinhan3,
+  bankAccountShinhan4,
   bankAccountTtoss,
+  bankAccountTtoss1,
+  bankAccountTtoss2,
+  bankAccountTtoss3,
+  bankAccountTtoss4,
   bankAccountKakao,
+  bankAccountKakao2,
+  bankAccountKaKao3,
 ];
