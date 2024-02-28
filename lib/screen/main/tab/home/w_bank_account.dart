@@ -1,4 +1,5 @@
 import 'package:fast_app_base/common/common.dart';
+import 'package:fast_app_base/common/widget/w_rounded_container.dart';
 import 'package:fast_app_base/screen/main/tab/home/vo/vo_bank_account.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,12 @@ class BankAccountWidget extends StatelessWidget {
               ("${account.balance}원").text.white.bold.size(18).make(),
             ],
           ).pSymmetric(h: 20, v: 10),
-        )
+        ),
+        RoundedContainer(
+          backgroundColor: context.appColors.buttonBackground,
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: '송금'.text.white.make(),
+        ).pSymmetric(h: 10),
       ],
     );
   }

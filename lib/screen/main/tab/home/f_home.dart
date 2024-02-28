@@ -2,6 +2,7 @@ import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/widget/round_button_theme.dart';
 import 'package:fast_app_base/common/widget/w_big_button.dart';
 import 'package:fast_app_base/common/widget/w_round_button.dart';
+import 'package:fast_app_base/common/widget/w_rounded_container.dart';
 import 'package:fast_app_base/screen/dialog/d_message.dart';
 import 'package:fast_app_base/screen/main/tab/home/bank_accounts_dummy.dart';
 import 'package:fast_app_base/screen/main/tab/home/w_bank_account.dart';
@@ -32,7 +33,17 @@ class HomeFragment extends StatelessWidget {
                     context.showSnackbar('토스뱅크가 눌렸습니다.');
                   },
                 ),
-                ...bankAccounts.map((e) => BankAccountWidget(account: e)),
+                height10,
+                RoundedContainer(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      "자산".text.bold.white.make(),
+                      height10,
+                      ...bankAccounts.map((e) => BankAccountWidget(account: e))
+                    ],
+                  ),
+                ),
               ],
             ).pSymmetric(h: 20), // pSymmetric: padding symmetric to Column
           ),
