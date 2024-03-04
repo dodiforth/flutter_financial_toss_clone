@@ -1,4 +1,5 @@
 import 'package:fast_app_base/common/dart/extension/context_extension.dart';
+import 'package:fast_app_base/screen/notification/s_notification.dart';
 import 'package:flutter/material.dart';
 import '../../../../common/common.dart';
 
@@ -41,7 +42,8 @@ class _TtossAppBarState extends State<TtossAppBar> {
           width10,
           Tap(
             onTap: () {
-              toggleShowRedDot();
+              //TODO: Implement : enter to notification page
+              Nav.push(const NotificationScreen());
             },
             child: Stack(
               children: [
