@@ -13,22 +13,24 @@ class NotificationScreen extends StatefulWidget {
 class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        const SliverAppBar(
-          title: Text('알림'),
-          floating: true,
-          snap: true,
-          pinned: true,
-        ),
-        SliverList(
-          delegate: SliverChildBuilderDelegate(
-            (BuildContext context, int index) => NotificationItemWidget(
-                notification: notificationDummies[index]),
-            childCount: notificationDummies.length,
+    return Material(
+      child: CustomScrollView(
+        slivers: [
+          const SliverAppBar(
+            title: Text('알림'),
+            floating: true,
+            snap: true,
+            pinned: true,
           ),
-        ),
-      ],
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) => NotificationItemWidget(
+                  notification: notificationDummies[index]),
+              childCount: notificationDummies.length,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

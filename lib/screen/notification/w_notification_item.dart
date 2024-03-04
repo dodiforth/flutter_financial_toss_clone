@@ -1,3 +1,4 @@
+import 'package:fast_app_base/common/common.dart';
 import 'package:flutter/material.dart';
 import './vo/vo_notifiaction.dart';
 
@@ -12,6 +13,13 @@ class NotificationItemWidget extends StatefulWidget {
 class _NotificationItemWidgetState extends State<NotificationItemWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      children: [
+        Row(
+          children: [Image.asset(widget.notification.type.iconPath)],
+        ),
+        widget.notification.description.text.make(),
+      ],
+    );
   }
 }
