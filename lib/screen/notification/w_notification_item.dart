@@ -1,6 +1,7 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:flutter/material.dart';
 import './vo/vo_notifiaction.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
 class NotificationItemWidget extends StatefulWidget {
   final TtossNotification notification;
@@ -35,6 +36,15 @@ class _NotificationItemWidgetState extends State<NotificationItemWidget> {
                   .size(12)
                   .color(context.appColors.lessImportantText)
                   .make(),
+              emptyExpanded,
+              timeago
+                  .format(widget.notification.date,
+                      locale: 'ko') // context.locale.languageCode
+                  .text
+                  .size(13)
+                  .color(context.appColors.lessImportantText)
+                  .make(),
+              width10
             ],
           ),
           widget.notification.description.text
