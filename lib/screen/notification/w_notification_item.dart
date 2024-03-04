@@ -11,15 +11,37 @@ class NotificationItemWidget extends StatefulWidget {
 }
 
 class _NotificationItemWidgetState extends State<NotificationItemWidget> {
+  static const leftPadding = 10.0;
+  static const iconWidth = 25.0;
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          children: [Image.asset(widget.notification.type.iconPath)],
-        ),
-        widget.notification.description.text.make(),
-      ],
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      color: widget.notification.isRead
+          ? context.backgroundColor
+          : context.appColors.unreadColor,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Width(leftPadding),
+              Image.asset(
+                widget.notification.type.iconPath,
+                width: iconWidth,
+              ),
+              widget.notification.type.name.text
+                  .size(12)
+                  .color(context.appColors.lessImportantText)
+                  .make(),
+            ],
+          ),
+          widget.notification.description.text
+              .make()
+              .pOnly(left: leftPadding + iconWidth),
+        ],
+      ),
     );
   }
 }

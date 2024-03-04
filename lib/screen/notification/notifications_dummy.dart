@@ -8,7 +8,7 @@ final notificationDummies = <TtossNotification>[
       '이번주에 영화 한편 어때요? CGV 할인 쿠폰이 도착했어요', DateTime.now().subtract(27.minutes)),
   TtossNotification(NotificationType.stock, '인적분할에 대해 알려드릴게요',
       DateTime.now().subtract(1.hours)),
-  TtossNotification(NotificationType.walk, '1000걸음 이상 걸었다면 포인트 받ㅇ세요',
+  TtossNotification(NotificationType.walk, '1000걸음 이상 걸었다면 포인트 받으세요',
       DateTime.now().subtract(1.hours)),
   TtossNotification(
       NotificationType.moneyTip,
