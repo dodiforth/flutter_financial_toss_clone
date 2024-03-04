@@ -1,4 +1,5 @@
 import 'package:fast_app_base/app.dart';
+import 'package:fast_app_base/screen/notification/d_notification.dart';
 import 'package:fast_app_base/screen/notification/notifications_dummy.dart';
 import 'package:fast_app_base/screen/notification/w_notification_item.dart';
 import 'package:flutter/foundation.dart';
@@ -29,7 +30,12 @@ class _NotificationScreenState extends State<NotificationScreen> {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) => NotificationItemWidget(
-                  notification: notificationDummies[index]),
+                notification: notificationDummies[index],
+                onTap: () {
+                  NotificationDialog(
+                      [notificationDummies[0], notificationDummies[1]]).show();
+                },
+              ),
               childCount: notificationDummies.length,
             ),
           ),
