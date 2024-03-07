@@ -11,7 +11,7 @@ class StockFragment extends StatefulWidget {
 
 class _StockFragmentState extends State<StockFragment>
     with SingleTickerProviderStateMixin {
-  late final tabController = TabController(length: 6, vsync: this);
+  late final tabController = TabController(length: 2, vsync: this);
 
   @override
   Widget build(BuildContext context) {
@@ -79,27 +79,22 @@ class _StockFragmentState extends State<StockFragment>
   Widget get tabBar => Column(
         children: [
           TabBar(
+            labelStyle: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+            labelPadding: const EdgeInsets.symmetric(vertical: 20),
+            //indicatorPadding: const EdgeInsets.symmetric(horizontal: 20),
+            indicatorColor: Colors.white,
             controller: tabController,
             tabs: [
-              '주식'.text.size(16).bold.make(),
-              'ETF'.text.size(16).bold.make(),
-              '선물/옵션'.text.size(16).bold.make(),
-              '채권'.text.size(16).bold.make(),
-              '펀드'.text.size(16).bold.make(),
-              '외환'.text.size(16).bold.make(),
+              '내 주식'.text.make(),
+              '오늘의 발견'.text.make(),
             ],
-            isScrollable: true,
-            labelColor: context.appColors.activate,
-            unselectedLabelColor: context.appColors.inActivate,
-            indicatorColor: context.appColors.activate,
           ),
-          height10,
-          Divider(
-            color: context.appColors.divider,
-            height: 1,
-          ),
+          const Line(),
         ],
-      ).pOnly(left: 20, right: 20);
+      );
   Widget get myAccount => const Placeholder();
   Widget get myStocks => const Placeholder();
 }
