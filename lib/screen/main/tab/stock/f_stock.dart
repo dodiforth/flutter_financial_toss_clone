@@ -4,7 +4,7 @@ import 'package:fast_app_base/screen/main/tab/stock/tab/f_my_stock.dart';
 import 'package:fast_app_base/screen/main/tab/stock/tab/f_today_discovery.dart';
 import 'package:flutter/material.dart';
 
-import 'search/f_search_stock.dart';
+import 'search/s_search_stock.dart';
 
 class StockFragment extends StatefulWidget {
   const StockFragment({super.key});
@@ -29,7 +29,7 @@ class _StockFragmentState extends State<StockFragment>
             actions: [
               ImageButton(
                 onTap: () {
-                  Nav.push(const SearchStockFragment());
+                  Nav.push(const SearchStockScreen());
                 },
                 imagePath: '$basePath/icon/stock_search.png',
               ),

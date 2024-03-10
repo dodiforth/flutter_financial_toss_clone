@@ -18,7 +18,7 @@ class PopularSearchStockList extends StatelessWidget {
             emptyExpanded,
             '오늘 ${DateTime.now().formattedTime} 기준'.text.size(12).make(),
           ],
-        ).pSymmetric(h: 20),
+        ),
         height20,
         ...popularStockList
             .mapIndexed(
@@ -27,6 +27,6 @@ class PopularSearchStockList extends StatelessWidget {
             )
             .toList(),
       ],
-    );
+    ).pSymmetric(h: 20);
   }
 }
