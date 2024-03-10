@@ -3,6 +3,10 @@ import 'package:fast_app_base/screen/main/tab/stock/vo_simple_stock.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+abstract mixin class SearchStockDataProvider {
+  late final searchData = Get.find<SearchStockData>();
+}
+
 class SearchStockData extends GetxController {
   List<SimpleStock> stocks = [];
   RxList<String> searchHistoryList = <String>[].obs;
