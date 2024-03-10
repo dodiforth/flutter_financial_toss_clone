@@ -15,10 +15,14 @@ class SearchStockScreen extends StatefulWidget {
 
 class _SearchStockScreenState extends State<SearchStockScreen> {
   final TextEditingController controller = TextEditingController();
+  late final searchData = Get.find<SearchStockData>();
 
   @override
   void initState() {
-    Get.put(SearchStockData());
+    Get.put(searchData);
+    controller.addListener(() {
+      searchData.search(controller.text);
+    });
     super.initState();
   }
 
