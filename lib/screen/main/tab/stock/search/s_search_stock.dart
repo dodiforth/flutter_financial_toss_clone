@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'w_popular_search_stock_list.dart';
+import 'w_search_auto_complete_list.dart';
 import 'w_search_history_stock_list.dart';
 import 'w_stock_search_app_bar.dart';
 
@@ -19,7 +20,7 @@ class _SearchStockScreenState extends State<SearchStockScreen> {
 
   @override
   void initState() {
-    Get.put(searchData);
+    Get.put(SearchStockData());
     controller.addListener(() {
       searchData.search(controller.text);
     });
@@ -36,11 +37,15 @@ class _SearchStockScreenState extends State<SearchStockScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: StockSearchAppBar(controller: controller),
-      body: ListView(
-        children: const [
-          SearchHistoryStockList(),
-          PopularSearchStockList(),
-        ],
+      body: Obx(
+        () => searchData.autoCompleteList.isEmpty
+            ? ListView(
+                children: const [
+                  SearchHistoryStockList(),
+                  PopularSearchStockList(),
+                ],
+              )
+            : SearchAutoCompleteList(),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:fast_app_base/common/util/local_json.dart';
 import 'package:fast_app_base/screen/main/tab/stock/vo_simple_stock.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SearchStockData extends GetxController {
@@ -21,8 +22,13 @@ class SearchStockData extends GetxController {
   }
 
   void search(String keyword) {
-    autoCompleteList
-        .where((element) => element.stockName.contains(keyword))
-        .toList();
+    if (keyword.isEmpty) {
+      autoCompleteList.clear();
+      return;
+    }
+    autoCompleteList.value =
+        stocks.where((element) => element.stockName.contains(keyword)).toList();
+
+    //debugPrint(autoCompleteList.toString());
   }
 }
