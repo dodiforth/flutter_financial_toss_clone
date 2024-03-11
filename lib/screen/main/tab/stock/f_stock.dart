@@ -5,6 +5,7 @@ import 'package:fast_app_base/screen/main/tab/stock/tab/f_today_discovery.dart';
 import 'package:flutter/material.dart';
 
 import 'search/s_search_stock.dart';
+import 'setting/s_setting.dart';
 
 class StockFragment extends StatefulWidget {
   const StockFragment({super.key});
@@ -41,7 +42,7 @@ class _StockFragmentState extends State<StockFragment>
               ),
               ImageButton(
                 onTap: () {
-                  context.showSnackbar('설정');
+                  Nav.push(const SettingScreen());
                 },
                 imagePath: '$basePath/icon/stock_settings.png',
               ),
