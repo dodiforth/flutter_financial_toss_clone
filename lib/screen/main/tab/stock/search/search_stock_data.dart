@@ -35,4 +35,12 @@ class SearchStockData extends GetxController {
 
     //debugPrint(autoCompleteList.toString());
   }
+
+  void addHistory(SimpleStock stock) {
+    searchHistoryList.add(stock.stockName);
+  }
+
+  void removeHistory(String stockName) {
+    searchHistoryList.remove(stockName);
+  }
 }
