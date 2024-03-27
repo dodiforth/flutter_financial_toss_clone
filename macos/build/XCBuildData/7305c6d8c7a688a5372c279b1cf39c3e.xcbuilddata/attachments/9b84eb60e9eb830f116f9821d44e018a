@@ -1,0 +1,15 @@
+{
+  "" : {
+    "const-values" : "/Users/dowonkim/Developer/flutter_projects/flutter_financial_toss/macos/build/Pods.build/Release/isar_flutter_libs.build/Objects-normal/x86_64/isar_flutter_libs-master.swiftconstvalues",
+    "dependencies" : "/Users/dowonkim/Developer/flutter_projects/flutter_financial_toss/macos/build/Pods.build/Release/isar_flutter_libs.build/Objects-normal/x86_64/isar_flutter_libs-master.d",
+    "diagnostics" : "/Users/dowonkim/Developer/flutter_projects/flutter_financial_toss/macos/build/Pods.build/Release/isar_flutter_libs.build/Objects-normal/x86_64/isar_flutter_libs-master.dia",
+    "emit-module-dependencies" : "/Users/dowonkim/Developer/flutter_projects/flutter_financial_toss/macos/build/Pods.build/Release/isar_flutter_libs.build/Objects-normal/x86_64/isar_flutter_libs-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/dowonkim/Developer/flutter_projects/flutter_financial_toss/macos/build/Pods.build/Release/isar_flutter_libs.build/Objects-normal/x86_64/isar_flutter_libs-master-emit-module.dia",
+    "swift-dependencies" : "/Users/dowonkim/Developer/flutter_projects/flutter_financial_toss/macos/build/Pods.build/Release/isar_flutter_libs.build/Objects-normal/x86_64/isar_flutter_libs-master.swiftdeps"
+  },
+  "/Users/dowonkim/.pub-cache/hosted/pub.dev/isar_flutter_libs-3.1.0/macos/Classes/IsarFlutterLibsPlugin.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release/isar_flutter_libs.build/Objects-normal/x86_64/IsarFlutterLibsPlugin.o",
+    "llvm-bc" : "/Users/dowonkim/Developer/flutter_projects/flutter_financial_toss/macos/build/Pods.build/Release/isar_flutter_libs.build/Objects-normal/x86_64/IsarFlutterLibsPlugin.bc",
+    "object" : "/Users/dowonkim/Developer/flutter_projects/flutter_financial_toss/macos/build/Pods.build/Release/isar_flutter_libs.build/Objects-normal/x86_64/IsarFlutterLibsPlugin.o"
+  }
+}
