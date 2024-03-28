@@ -7,6 +7,7 @@ export 'package:flutter_svg/flutter_svg.dart';
 export 'package:nav/nav.dart';
 export 'package:quiver/strings.dart';
 export 'package:velocity_x/velocity_x.dart';
+export 'package:flutter_animate/flutter_animate.dart';
 
 export '../common/dart/extension/animation_controller_extension.dart';
 export '../common/dart/extension/collection_extension.dart';
@@ -26,7 +27,6 @@ export 'widget/w_tap.dart';
 
 export 'theme/color/abs_theme_colors.dart';
 export 'theme/shadows/abs_theme_shadows.dart';
-
 
 const defaultFontStyle = GoogleFonts.ptSerif;
 

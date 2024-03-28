@@ -1,5 +1,4 @@
 import 'package:fast_app_base/common/common.dart';
-import 'package:fast_app_base/common/dart/extension/num_duration_extension.dart';
 import 'package:fast_app_base/common/widget/round_button_theme.dart';
 import 'package:fast_app_base/common/widget/w_big_button.dart';
 import 'package:fast_app_base/common/widget/w_round_button.dart';
@@ -10,6 +9,7 @@ import 'package:fast_app_base/screen/main/tab/home/bank_accounts_dummy.dart';
 import 'package:fast_app_base/screen/main/tab/home/w_bank_account.dart';
 import 'package:fast_app_base/screen/main/tab/home/w_ttoss_app_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../dialog/d_color_bottom.dart';
 import '../../../dialog/d_confirm.dart';
@@ -56,7 +56,7 @@ class HomeFragment extends StatelessWidget {
                   ),
                 ],
               ).pSymmetric(h: 20), // pSymmetric: padding symmetric to Column
-            ),
+            ).animate().slideY(duration: 1000.ms),
           ),
           const TtossAppBar(),
         ],
