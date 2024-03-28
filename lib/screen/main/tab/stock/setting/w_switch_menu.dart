@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 class SwitchMenu extends StatelessWidget {
   final String title;
   final bool isOn;
-  final ValueChanged<bool> onChanged;
+  final ValueChanged<bool> onTap;
 
   const SwitchMenu(
       {super.key,
       required this.title,
       required this.isOn,
-      required this.onChanged});
+      required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class SwitchMenu extends StatelessWidget {
       children: [
         title.text.bold.make(),
         emptyExpanded,
-        OsSwitch(value: isOn, onChanged: onChanged)
+        OsSwitch(isOn: isOn, onChanged: onTap)
       ],
     ).p20();
   }
