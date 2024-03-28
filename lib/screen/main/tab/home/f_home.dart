@@ -55,8 +55,12 @@ class HomeFragment extends StatelessWidget {
                     ),
                   ),
                 ],
-              ).pSymmetric(h: 20), // pSymmetric: padding symmetric to Column
-            ).animate().slideY(duration: 1000.ms),
+              )
+                  .pSymmetric(h: 20)
+                  .animate()
+                  .slideY(duration: 1500.ms)
+                  .fadeIn(), // pSymmetric: padding symmetric to Column
+            ),
           ),
           const TtossAppBar(),
         ],
